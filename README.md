@@ -1,2 +1,4 @@
-DigitalNotebook
-===============
+#Digital Notebook
+*Niels Joubert*
+
+====================

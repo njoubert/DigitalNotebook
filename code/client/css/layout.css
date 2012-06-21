@@ -1,4 +1,35 @@
-
 body {
   padding: 50px;
+}
+
+#toolbar {
+  position: absolute;
+  top: 50px;
+  left: 5px;
+  width: 30px;
+  background: #eee;
+  padding: 5px;
+}
+#toolbar ul {
+  
+}
+#toolbar li {
+  margin-top: 5px;
+  border: 1px solid #888;
+  width: 29px;
+  height: 29px;
+  text-align: center;
+}
+
+
+#container {
+  width: 100%;
+}
+.Box {
+  border: 1px solid #ccc;
+  min-height: 1em;
+  margin-bottom: 1em;
+}
+.Box_hover {
+  border: 1px solid black;
 }

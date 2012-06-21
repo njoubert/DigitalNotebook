@@ -51,12 +51,11 @@ pre,code,tt { font: 1em 'andale mono', 'lucida console', monospace; line-height:
 /* Lists
 -------------------------------------------------------------- */
 
-li ul,
-li ol  { margin: 0; }
-ul, ol { margin: 0 1.5em 1.5em 0; padding-left: 1.5em; }
+li ul, li ol  { margin: 0; }
+#container ul, ol        { margin: 0 1.5em 1.5em 0; padding-left: 1.5em; }
 
-ul     { list-style-type: disc; }
-ol     { list-style-type: decimal; }
+#container ul     { list-style-type: disc; }
+#container ol     { list-style-type: decimal; }
 
 dl     { margin: 0 0 1.5em 0; }
 dl dt  { font-weight: bold; }

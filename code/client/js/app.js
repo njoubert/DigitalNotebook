@@ -1,8 +1,8 @@
 define( 
 
-['jquery', 'jquery-jeditable'], 
+['jquery', 'markdown', 'jquery-jeditable'], 
 
-function($) {
+function($, Markdown) {
 
   var boxCounter = 0;
   function genBoxId() {
@@ -23,13 +23,13 @@ function($) {
     //   this.contentEditable='true';})
     
     newBox.editable(function(value, settings) {
-      console.log("booooop")
-      return(value);
+      $.data(newBox, "markdown", value);
+      return(Markdown.toHTML(value));
     }, {
       type    : 'textarea',
       onblur  : 'submit',
       data    : function(data,settings) {
-        return data;
+        return $.data(newBox, "markdown");
       }
     });
     

@@ -1,6 +1,6 @@
 define( 
 
-['jquery'], 
+['jquery', 'jquery-jeditable'], 
 
 function($) {
 
@@ -11,11 +11,28 @@ function($) {
   
   function getNewBox() {
     var newBox = $("<div>", {id: genBoxId(), class: "Box" });
-    newBox.html();
+    
+    newBox.html("YES");
+    
     newBox.hover(
       function() { $(this).addClass("Box_hover"); }, 
       function() { $(this).removeClass("Box_hover"); });
-    newBox.click(function() { this.contentEditable='true';})
+      
+    // newBox.click(function() { 
+    //   console.log("click"); 
+    //   this.contentEditable='true';})
+    
+    newBox.editable(function(value, settings) {
+      console.log("booooop")
+      return(value);
+    }, {
+      type    : 'textarea',
+      onblur  : 'submit',
+      data    : function(data,settings) {
+        return data;
+      }
+    });
+    
     return newBox;
   }
 
